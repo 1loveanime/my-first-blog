@@ -8,15 +8,12 @@
         </div>
 
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>ung kalahati lang alam mo benj mag kano bayad sa isang ganun 20 pesos pa akyat un :broken_heart: para sa 20 umiyak  ako ihh</p>
+            {% for post in posts %}
+                <h2><a href="">{{ post.title}}</a></h2>
+                <p>{{ post.published_date}}</p>
+                <p>{{ post.text}}</p>
+            {% endfor %}
         </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>walang ingay tahimik lang kapag gabi laki ng buwan kitang kita mo ung maraming star tapos pag umaga mogs ung parang may bumato ng smoke bomb</p>
-        </div>
+            
     </body>
 </html>
